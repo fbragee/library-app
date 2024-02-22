@@ -59,9 +59,6 @@ button {
 .bookCard > h3 {
 	font-size: xx-large;
 }
-.bookCard > h5 {
-}
-
 .booksContainer {
 	display: flex;
 	flex-wrap: wrap;
@@ -71,6 +68,7 @@ li {
 	list-style: none;
 	display: flex;
 	justify-content: space-around;
+	gap: 30px;
 }
 
 h1 {
@@ -78,4 +76,8 @@ h1 {
 	color: #fff;
 	padding: 10px 30px 10px 30px;
 	border-radius: 20px;
+}
+
+.bookCard > button {
+	display: inline-block;
 }

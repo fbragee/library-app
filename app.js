@@ -31,10 +31,13 @@ function render() {
                     <h5 class='author'>${book.author}</h5>
                     <p> ${book.pages} pages</p>
                     <li>
-                    <p class='read-status'>${
-						book.read ? 'Read' : 'Not Read Yet'
-					}</p> <input id='cardRead' class='cardRead' type='checkbox' onclick='toggleRead(${i})'></li>
-                    <button id='removeBtn' class='removeBtn' onclick='removeBook(${i})'>Remove</button>
+
+                    <button class='toggle-read-btn' onclick='toggleRead(${i})'>${
+			book.read ? 'Read' : 'Not Read Yet'
+		}</button>
+        <button id='removeBtn' class='removeBtn' onclick='removeBook(${i})'>Remove</button>
+                    </li>
+                    
 
         </div>
         
