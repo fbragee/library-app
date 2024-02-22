@@ -1,10 +1,15 @@
+* {
+	font-family: 'Protest Revolution', 'Times New Roman', Times, serif;
+}
+
 body {
 	display: flex;
-
+	background-color: #1b1a55;
 	align-items: center;
 	flex-direction: column;
 	width: 100vw;
 	height: 100vh;
+	overflow: hidden;
 }
 
 .addBook {
@@ -12,25 +17,49 @@ body {
 	flex-direction: column;
 	margin: 20px;
 	gap: 20px;
+	background-color: #9290c3;
+	padding: 40px;
+	border-radius: 30px;
 }
 
 .addBook > input {
-	background-color: antiquewhite;
+	background-color: white;
 	border: 1px solid black;
 	border-radius: 20px;
+	padding: 10px 35px 10px 35px;
+}
+
+.addBook > li {
+	background-color: #535c91;
+	color: white;
+	padding: 10px 35px 10px 35px;
+	border-radius: 20px;
+}
+button {
+	border: none;
+	padding: 15px 30px 15px 30px;
+	border-radius: 30px;
+	cursor: pointer;
 }
 .bookCard {
-	width: 250px;
-	height: 150px;
-	background-color: purple;
+	width: 450px;
+	height: 250px;
+	background-color: #070f2b;
 	color: white;
-	padding: 30px;
+	padding: 50px;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: start;
 	flex-direction: column;
-	margin: 50px;
-	border-radius: 30px;
+	margin: 60px;
+	border-radius: 20px;
+	border-left: 10px solid #9290c3;
+}
+
+.bookCard > h3 {
+	font-size: xx-large;
+}
+.bookCard > h5 {
 }
 
 .booksContainer {
@@ -42,4 +71,11 @@ li {
 	list-style: none;
 	display: flex;
 	justify-content: space-around;
+}
+
+h1 {
+	background-color: #070f2b;
+	color: #fff;
+	padding: 10px 30px 10px 30px;
+	border-radius: 20px;
 }

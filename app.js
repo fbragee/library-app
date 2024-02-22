@@ -8,8 +8,16 @@ class Book {
 		this.author = author;
 		this.pages = pages;
 		this.read = read;
-		return this.title, this.author, this.pages;
 	}
+}
+
+Book.prototype.toggleRead = function () {
+	this.read = !this.read;
+};
+
+function toggleRead(index) {
+	myLibrary[index].toggleRead();
+	render();
 }
 
 function render() {
@@ -18,13 +26,16 @@ function render() {
 	for (let i = 0; i < myLibrary.length; i++) {
 		let book = myLibrary[i];
 		const div = document.createElement('div');
-		div.innerHTML = `<div data-element-${i} class='bookCard'>
+		div.innerHTML = `<div class='bookCard'>
                     <h3 class='title'>${book.title}</h3>
                     <h5 class='author'>${book.author}</h5>
-                    <p> ${book.pages}</p>
+                    <p> ${book.pages} pages</p>
+                    <li>
                     <p class='read-status'>${
 						book.read ? 'Read' : 'Not Read Yet'
-					}</p>
+					}</p> <input id='cardRead' class='cardRead' type='checkbox' onclick='toggleRead(${i})'></li>
+                    <button id='removeBtn' class='removeBtn' onclick='removeBook(${i})'>Remove</button>
+
         </div>
         
         `;
@@ -47,4 +58,7 @@ addBookBtn.addEventListener('click', function (e) {
 	addBookToLibrary();
 });
 
-myLibrary.push(new Book('Harry Potter', 'JK Rowling', '900', 'Read'));
+function removeBook(index) {
+	myLibrary.splice(index, 1);
+	render();
+}
