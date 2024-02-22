@@ -9,11 +9,11 @@ class Book {
 		this.pages = pages;
 		this.read = read;
 	}
-}
 
-Book.prototype.toggleRead = function () {
-	this.read = !this.read;
-};
+	toggleRead() {
+		this.read = !this.read;
+	}
+}
 
 function toggleRead(index) {
 	myLibrary[index].toggleRead();
